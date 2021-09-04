@@ -1,0 +1,60 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background: url("../Images/1.jpg");
+  background-position-y: 12vh;
+  background-position-x: 100%;
+  background-origin: content-box;
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+#footer {
+  width: fill;
+  height: 2.5rem;
+  text-align: center;
+  background: rgb(36, 35, 35);
+  color: white;
+  font-size: 1.5rem;
+  bottom: 0;
+  margin-top: 20px;
+}
+.clear {
+  width: 100%;
+  height: 180px;
+  clear: both;
+}
+
+/* =======================================================================================
+============================================================================================ */
+@media screen and (max-width: 850px) {
+  body {
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/607056ba-32fc-49f8-b1b4-84c62e7b4cef/d65tnhe-0481a4ce-a860-45fa-98df-6c08d9203adb.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNjA3MDU2YmEtMzJmYy00OWY4LWIxYjQtODRjNjJlN2I0Y2VmXC9kNjV0bmhlLTA0ODFhNGNlLWE4NjAtNDVmYS05OGRmLTZjMDhkOTIwM2FkYi5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.oI4A1xNo-lW9OlkDkWoW9yjJgHM7AJDdCHjMSzsLWHI)
+      rgb(7, 6, 6);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 8vh;
+  }
+  .clear {
+    height: 100px;
+  }
+}
+
+/* ==================================================================================
+======================================================================================= */
+@media screen and (orientation: landscape) and (max-height: 370px) {
+  body {
+    background-attachment: fixed;
+    background-position-y: 0;
+  }
+  .clear {
+    height: 80px;
+  }
+}

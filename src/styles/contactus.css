@@ -1,0 +1,163 @@
+* {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+.contactus-container {
+  width: 80%;
+  height: auto;
+  border-radius: 30px;
+  border-top: 2px solid yellow;
+  border-bottom: 2px solid yellow;
+  margin: 2.5rem auto;
+  animation: boxRGB 10s infinite;
+  display: flex;
+}
+@keyframes boxRGB {
+  0% {
+    box-shadow: 0px 0px 25px 6px #000000;
+  }
+  20% {
+    box-shadow: 0px 0px 25px 12px #2600ff;
+  }
+  40% {
+    box-shadow: 0px 0px 25px 12px #c300ff;
+  }
+  60% {
+    box-shadow: 0px 0px 25px 12px #00ff00;
+  }
+  80% {
+    box-shadow: 0px 0px 25px 12px #ff0000;
+  }
+  100% {
+    box-shadow: 0px 0px 25px 12px #ffee00;
+  }
+}
+.contactus-pic-div {
+  width: 50%;
+  max-height: 90vh;
+  background: url("../Images/contactus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 100%;
+  border-radius: 30px 0px 0px 30px;
+  overflow: hidden;
+  text-align: center;
+}
+.contactus-pic-div h1 {
+  font-size: 5rem;
+  -webkit-text-fill-color: #ffffff;
+  text-shadow: 9px 4px 5px #ff0716;
+}
+.contactus-content-div {
+  width: 50%;
+  background: rgba(0, 0, 0, 0.685);
+  border-radius: 0px 30px 30px 0px;
+}
+
+.contactus-email-div,
+.contactus-onlinechat-div,
+.contactus-phone-div {
+  border-bottom: 2px dashed yellow;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.contactus-phone-div {
+  border: 0;
+}
+
+.contactus-email-div p,
+.contactus-onlinechat-div p,
+.contactus-phone-div p {
+  font-size: 1.5rem;
+  margin: 1vh 0;
+}
+.contactus-email-div h1,
+.contactus-onlinechat-div h1,
+.contactus-phone-div h1,
+.contactus-email-div h2,
+.contactus-onlinechat-div h2,
+.contactus-phone-div h2 {
+  color: rgb(231, 255, 19);
+  text-shadow: 3px 3px 2px black;
+}
+.contactus-onlinechat-div button {
+  font-size: 2rem;
+  outline: 0;
+  color: rgb(238, 255, 0);
+  margin: 2% auto;
+  width: 20vw;
+  border-radius: 20px;
+  cursor: pointer;
+  background: rgb(35, 42, 37);
+  box-shadow: 2px 2px 4px 4px rgb(0, 0, 0);
+}
+.contactus-onlinechat-div button:hover {
+  background: rgb(98, 116, 103);
+}
+.mobile-contact-h1 {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .contactus-container {
+    width: 90%;
+    margin: 0 auto 40px;
+    background: url("../Images/contactus.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 80%;
+  }
+  .contactus-pic-div {
+    display: none;
+  }
+
+  .contactus-content-div {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.747);
+    border-radius: 30px;
+  }
+  .contactus-content-div > h1 {
+    display: block;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 10px auto;
+    border-bottom: 2px solid red;
+  }
+
+  .contactus-phone-div {
+    border: 0;
+  }
+  .contactus-email-div p,
+  .contactus-onlinechat-div p,
+  .contactus-phone-div p {
+    font-size: 1.3rem;
+  }
+
+  .contactus-onlinechat-div button {
+    font-size: 1.8rem;
+    width: 40vw;
+    background: rgb(255, 0, 0);
+  }
+  .contactus-onlinechat-div button:hover {
+    background: rgb(0, 255, 34);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 370px) {
+  .mobile-contact-h1 {
+    display: none;
+  }
+  .contactus-container {
+    height: auto;
+    margin-top: 20vh;
+  }
+  .contactus-content-div {
+    padding: 5px;
+  }
+}

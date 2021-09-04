@@ -1,0 +1,96 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.comment-component {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#writingContainer {
+  backdrop-filter: blur(40px);
+  border-radius: 30px;
+}
+.writing-div {
+  padding: 10px;
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+.sub-button {
+  background: rgb(15, 13, 20);
+  color: rgb(243, 207, 207);
+  padding: 10px 0px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 3px solid rgb(0, 255, 234);
+  font-weight: 900;
+}
+.sub-button:hover {
+  background: rgb(0, 255, 234);
+  color: black;
+}
+.text-area {
+  font-size: 1rem;
+  resize: none;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.comments-container {
+  width: 50%;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+  margin: 30px auto;
+  background-color: rgb(24, 23, 23);
+}
+.flex-item,
+label {
+  margin-top: 10px;
+}
+.text-area,
+.flex-user-fullname {
+  padding: 8px;
+  border-radius: 30px;
+  background: rgb(194, 194, 194);
+}
+.text-area::placeholder,
+.flex-user-fullname::placeholder {
+  color: rgb(66, 55, 55);
+}
+label {
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 10px;
+  background: rgb(43, 44, 32);
+  width: 65%;
+  margin: 10px auto;
+  border: 3px solid rgb(0, 255, 234);
+  font-weight: 900;
+  color: white;
+}
+/* ==================================================================================
+======================================================================================= */
+@media screen and (max-width: 850px) {
+  .comment-component {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .comments-container {
+    width: 90%;
+  }
+}
+
+/* ==================================================================================
+======================================================================================= */
+@media screen and (orientation: landscape) and (max-height: 370px) {
+}

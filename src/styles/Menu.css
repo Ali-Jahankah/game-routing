@@ -1,0 +1,453 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#mobileNav {
+  display: none;
+}
+.nav-img {
+  display: block;
+
+  width: 100%;
+
+  max-height: 10vh;
+}
+.nav-img-div {
+  text-align: center;
+  width: 8%;
+  margin: auto;
+}
+
+#svg {
+  min-width: 100%;
+  position: absolute;
+  top: 78px;
+  z-index: 1;
+  left: 0;
+}
+#wave {
+  transform: rotate(180deg);
+  transition: 0.3s;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.363));
+  filter: drop-shadow(0px -4px 1px rgba(0, 0, 0, 0.739));
+}
+#wavePath {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+#menuDesktop {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(rgb(80, 57, 83), rgb(236, 64, 92));
+  display: flex;
+  align-items: center;
+  z-index: 4;
+}
+#menuDesktop #menuItems {
+  width: 45%;
+}
+
+#menuDesktop #menuItems ul li {
+  list-style: none;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-left: 2%;
+  display: inline-block;
+  border-bottom-width: 0%;
+}
+
+.navlink-none-active {
+  display: block;
+  text-decoration: none;
+  color: wheat;
+  transition: all 1s;
+}
+#menuDesktop #menuItems ul li[class="menu-item"]:hover {
+  border-bottom: 2px solid yellow;
+  border-bottom-width: 100%;
+}
+#menuDesktop #menuItems ul li[class="menu-item"]:hover a {
+  color: rgb(0, 255, 243);
+}
+#menu-visible #menuItems ul li[class="menu-item"]:hover {
+  border-bottom: 2px solid yellow;
+  border-bottom-width: 100%;
+}
+#menu-visible #menuItems ul li[class="menu-item"]:hover a {
+  color: rgb(0, 255, 243);
+}
+
+#logInForm {
+  width: 35%;
+
+  margin: auto auto;
+}
+#logInForm ul {
+  display: flex;
+  flex-direction: row;
+}
+#logInForm a {
+  color: rgb(231, 237, 245);
+  font-weight: 900;
+}
+.log-in-li-email {
+  display: flex;
+  flex-direction: column;
+}
+#logInForm ul li {
+  list-style: none;
+  margin: 0px 1%;
+}
+#logInForm ul li input {
+  padding: 5px 0px;
+  outline: 0;
+  width: 100%;
+}
+
+#logInForm ul li button {
+  padding: 5px 30%;
+  cursor: pointer;
+  transition: all 1;
+}
+#logInForm ul li button:hover {
+  background: rgba(251, 0, 42, 0.589);
+}
+#logInForm ul li input,
+#logInForm ul li button {
+  border-top: 2px solid rgb(255, 251, 0);
+  border-bottom: 2px solid rgb(255, 251, 0);
+  background: rgba(0, 0, 0, 0.39);
+  color: white;
+  border-radius: 10px;
+}
+#logInForm ul li input::placeholder {
+  color: white;
+}
+
+#searchBar {
+  background: rgba(0, 0, 0, 0.219);
+  border-bottom: solid 2px rgb(255, 208, 0);
+  border-top: solid 2px rgb(255, 251, 0);
+  border-radius: 10px;
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px;
+  outline: 0;
+}
+.menu-search {
+  position: relative;
+}
+#menu-visible,
+#menu-hidden {
+  display: none;
+}
+.menu-hidden {
+  display: none;
+}
+#searchBar::placeholder {
+  color: aliceblue;
+}
+.svg-icon,
+.svg-icon-search {
+  width: 1em;
+  height: 1em;
+  position: static;
+  transform: scale(1.5);
+
+  vertical-align: top;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #000000;
+}
+
+.svg-icon circle,
+.svg-icon-search circle {
+  stroke: #e5ff00;
+  stroke-width: 1;
+}
+
+#navIcons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#searchIcon {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.315);
+
+  top: 30%;
+  right: 4%;
+  transform: scale(1);
+  cursor: pointer;
+  outline: 0;
+  transform: scale(1.5);
+  border-radius: 50%;
+}
+.svg-icon-search path,
+.svg-icon-search polygon,
+.svg-icon-search rect {
+  fill: white;
+}
+#navIcons {
+  border-right: 2px solid yellow;
+  border-left: 2px solid yellow;
+  margin-left: 5%;
+  padding: 5px;
+  cursor: pointer;
+  width: 200%;
+}
+.menu-svg-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navlink-active {
+  color: rgb(0, 255, 243);
+  border-bottom: 2px solid rgb(255, 251, 0);
+}
+
+/* =======================================================================================
+============================================================================================ */
+@media screen and (max-width: 850px) {
+  * {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .nav-img-div {
+    display: none;
+  }
+
+  #mobileNav {
+    width: 100%;
+    height: 50px;
+    background: rgb(7, 6, 6);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    justify-content: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  #navImg {
+    width: 15%;
+    height: 100%;
+    direction: rtl;
+  }
+  #navIconsContainer {
+    width: 30%;
+  }
+
+  #navInput {
+    width: 30%;
+    position: relative;
+    margin: 0 3%;
+  }
+
+  #mobileNav img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  #mobileNav .search-bar {
+    font-size: 1rem;
+    position: static;
+    width: 100%;
+  }
+  .menu-hidden {
+    display: none;
+  }
+  .search-bar::placeholder {
+    color: white;
+  }
+  .svg-icon {
+    width: 1em;
+    height: 1em;
+    position: static;
+    transform: scale(1.5);
+    vertical-align: top;
+  }
+
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: #ffffff;
+  }
+
+  .menu-container {
+    position: fixed;
+    top: 2vh;
+    right: 4vw;
+    transition: all 1s;
+    z-index: 4;
+  }
+  .menu-icon {
+    width: 10vw;
+    height: 0.8vh;
+    background: linear-gradient(90deg, rgb(204, 0, 255), red);
+    margin: 3px;
+    transition: all 1s;
+    outline: none;
+  }
+
+  .menu-container .menu-icon-2 {
+    display: none;
+  }
+  .menu-container .menu-icon-1 {
+    transform: rotate(45deg) translate(7px, 5px);
+  }
+  .menu-container .menu-icon-3 {
+    transform: rotate(-45deg);
+  }
+  .menu-visible {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: linear-gradient(black, rgba(239, 243, 0, 0.952));
+    display: block;
+    visibility: visible;
+    z-index: 3;
+    top: 0;
+    overflow-y: auto;
+  }
+  #svg {
+    display: none;
+  }
+
+  #menuItems ul li {
+    list-style: none;
+
+    text-align: center;
+    width: 80%;
+    padding: 3vh 0px;
+    font-size: 2.2rem;
+    margin: 0 auto;
+  }
+  #menuItems ul li a {
+    display: block;
+    text-decoration: none;
+    color: wheat;
+  }
+
+  #logInForm {
+    display: none;
+  }
+  .mobile-login-form {
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-login-form ul li {
+    list-style: none;
+  }
+  .mobile-login-form button {
+    margin: 10px auto;
+    display: block;
+    width: 70%;
+    font-size: 2rem;
+    outline: 0;
+  }
+  .mobile-login-form button,
+  .mobile-login-form input {
+    border-radius: 40px;
+    border-top: 2px solid rgb(255, 0, 191);
+    border-bottom: 2px solid rgb(255, 0, 191);
+  }
+  .mobile-login-form input {
+    padding: 5%;
+    font-size: 1rem;
+    margin-top: 6px;
+    width: 70vw;
+    margin: 10px auto;
+    outline: 0;
+  }
+  .mobile-login-form a {
+    display: block;
+  }
+
+  #searchBar {
+    display: none;
+  }
+  .search-bar {
+    width: 30%;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.219);
+    border-bottom: solid 2px rgb(255, 208, 0);
+    border-top: solid 2px rgb(255, 251, 0);
+    border-radius: 10px;
+    color: white;
+    outline: 0;
+    font-size: 1.2rem;
+    margin: 0px 5%;
+  }
+
+  #menuDesktop {
+    display: none;
+  }
+
+  #navIcons {
+    border: 0;
+    margin: 0 auto;
+    padding: 5px;
+    width: 100%;
+  }
+}
+
+/* ==================================================================================
+======================================================================================= */
+@media screen and (orientation: landscape) and (max-height: 370px) {
+  #mobileNav,
+  .menu-container {
+    position: relative;
+  }
+  #mobileNav {
+    height: 14vh;
+  }
+  .menu-icon {
+    width: 5vw;
+    height: 1.5vh;
+  }
+
+  .menu-container {
+    position: fixed;
+    top: 3vh;
+  }
+  .menu-hidden {
+    display: none;
+  }
+  #mobileNav {
+    width: 100%;
+    background: rgb(7, 6, 6);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    justify-content: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .mobile-login-form input {
+    width: 40vw;
+    padding: 4% 5px;
+  }
+  #menu-visible {
+    overflow: scroll;
+  }
+}
