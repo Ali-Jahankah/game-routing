@@ -4,11 +4,14 @@ class RegesterForm extends Component {
   state = {};
   formSubmit = (e) => {
     e.preventDefault();
-    let name = document.getElementsByClassName("regester-lastname").value;
+    let name = document.getElementsByClassName("regester-lastname")[0].value;
     if (!name) {
       e.preventDefault();
       alert("Noooooooo");
+      console.log(name);
       return;
+    } else {
+      alert("Registered successfully!");
     }
   };
   render() {

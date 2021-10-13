@@ -112,7 +112,7 @@
     z-index: 2;
   }
   .subset-div img {
-    max-height: 220px;
+    max-width: 37vw;
   }
   #navShop ul {
     float: none;
@@ -122,20 +122,27 @@
   .main-shop-div {
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto;
   }
   .subset-overlay-div {
     font-size: 0.6rem;
   }
   .shop-container {
-    width: 90%;
+    margin: 0 auto;
+    max-width: 90%;
     background: rgb(20, 19, 19);
   }
+
   .main {
     display: flex;
     position: relative;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main-shop-div {
+    grid-template-columns: auto auto;
   }
 }
 
