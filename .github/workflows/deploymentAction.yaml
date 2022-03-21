@@ -1,0 +1,38 @@
+name: Build and Deploy to Netlify
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout our application code
+        uses: actions/checkout@v2
+
+      - name: Install application dependencies
+        run: |
+          npm install
+      #      # for safety - use tests before making a deployment
+      #      - name: Test
+      #        run: |
+      #          npm run test
+
+      # This command will build application files into ./build folder
+      - name: Build our application
+        run: |
+          npm run build
+      # Using existing github action to create a deployment to Netlify -> find more at: https://github.com/marketplace
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: "./build"
+          production-branch: master
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
